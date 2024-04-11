@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Book List</h1>
+    <ul>
+        {% for book in books %}
+            <li><a href="{% url 'book1_description' book_id=book.id %}">{{ book.name }} by {{ book.author_name }} - ${{ book.price }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
